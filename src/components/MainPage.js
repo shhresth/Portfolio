@@ -1,9 +1,8 @@
 import {React,useRef} from 'react'
 import '../components/mainpage.css'
 import {Carousel, Col, Layout, Menu, Progress, Row, theme} from 'antd';
-import { icons } from 'antd/es/image/PreviewGroup';
 import {Divider} from 'antd';
-import { MessageFilled,ArrowDownOutlined,StarOutlined} from '@ant-design/icons';
+import { MessageFilled,ArrowDownOutlined,StarOutlined, InstagramFilled, InstagramOutlined, ToolFilled, FundProjectionScreenOutlined} from '@ant-design/icons';
 import {ConfigProvider} from 'antd';
 import banner from '../images/polyvision-banner.png'
 import pv1 from '../images/pv-1.png'
@@ -30,28 +29,47 @@ const MainPage = () => {
           console.log(error.text);
       });
   };
-
+  const scollToSkills = useRef();
+  const scollToprojects = useRef();
+  const scollToContact = useRef();
+  const scrollToHome = useRef();
   return (
     <div className='container'>
         <Layout className="layout">
-      <Header>
-        <div className="logo" >Shresth Gupta</div>
+      <Header  style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%' }}>
+        <div className="logo" onClick={()=>{
+           scrollToHome.current.scrollIntoView();
+        }} >Shresth Gupta</div>
         <Menu
           theme="dark"
+        
           mode="horizontal"
           defaultSelectedKeys={['2']}
           className='menus'
+          onClick={(e)=>{
+            if(e.key=== 'skills'){
+              scollToSkills.current.scrollIntoView();
+            }
+            else if(e.key=== 'projects'){
+              scollToprojects.current.scrollIntoView();
+            }
+            else{
+              scollToContact.current.scrollIntoView();
+            }
+          }}
           items={[
             {
-              key:'projects',
-              label:'My projects!',
+              key:'skills',
+              label:'My Skills!',
+              icon:<ToolFilled/>
               
             },
             {
-            key:'about',
-            label:'About me',
-            
-          },
+              key:'projects',
+              label:'My projects!',
+              icon:<FundProjectionScreenOutlined/>
+              
+            },
           {
             key:'talk',
             label:'Talk to me',
@@ -61,11 +79,10 @@ const MainPage = () => {
         />
       </Header>
       <Content >
-        <div className="Header">
+        <div className="Header" ref={scrollToHome}>
             <div className="line1">
         
         <span>Web Developer</span>
-        {/* <Col span={1}><img className='img1' src={img1}></img></Col> */}
        
        </div>
        <div className="line2">
@@ -78,7 +95,7 @@ const MainPage = () => {
        </div>
        <div className="projects">
         <div className="highlight-title">
-          What I actually do
+          Here's what I actually do
           <Divider/>
           <Divider/>
         </div>
@@ -106,22 +123,23 @@ const MainPage = () => {
     </div>
           </Carousel>
           </ConfigProvider>
-          <div className="main-info">
+          <div className="main-info" >
             <div className='main-info-header'><span className='main-year'><StarOutlined style={{'fontSize':'2rem'}}></StarOutlined> Highlight <StarOutlined style={{'fontSize':'2rem'}}></StarOutlined></span>
             <p className='pv-anchor'><a href={'https://'+'polyvision.tech/'} target='_blank'>Polyvision</a> </p>
             <p className='pv-info'>Polyvision is a Web Application build using MERN Stack with the aim to showcase the numerous carrer opportunities in the technical domain to the SSC passed students.  </p>
             <div className="pv-links">
-            <p>Check it out here!</p>
+            <p ref={scollToSkills}>Check it out here!</p>
+            {/* here ref is used to make skills center of the screen */}
             <ul style={{'paddingLeft':'20px'}}>
           <li><span><a href={'https://'+'github.com/shhresth/polyVision'} target='_blank' rel="noreferrer"> <GithubFilled></GithubFilled> Github Repository</a></span></li>
-         <li> <span><a href={'https://'+'polyvision.tech/'} target='_blank' rel="noreferrer"> <DesktopOutlined></DesktopOutlined> Live Website</a></span></li>
+         <li> <span ><a href={'https://'+'polyvision.tech/'} target='_blank' rel="noreferrer"> <DesktopOutlined></DesktopOutlined> Live Website</a></span></li>
           </ul>
             </div>
             </div>
           </div>
         </div>
        </div>
-       <div className="skills">
+       <div className="skills" >
         <p>My skills</p>
         <div className="Progress-bar">
             
@@ -164,7 +182,7 @@ const MainPage = () => {
         </div>
         
         </div>
-        <div className="work-section">
+        <div className="work-section"  ref={scollToprojects}>
           <div className="work-txt">
             <p>My Works</p>
             <span>The following are my most recent works.
@@ -176,13 +194,13 @@ const MainPage = () => {
             <div className='projects'>
             <a href={'https://'+'polyvision.tech/'}target='_blank' rel="noopener noreferrer" >
             <span>Polyvision</span>
-          <img src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/96/null/external-share-user-interface-anggara-basic-outline-anggara-putra-3.png"  ></img>
+          <img src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/96/null/external-share-user-interface-anggara-basic-outline-anggara-putra-3.png" alt='share image'  ></img>
           </a>
           </div>
           <div className='projects'>
             <a href={'https://'+'polyvision.tech/'}target='_blank' rel="noopener noreferrer" >
             <span>Kryptosite</span>
-          <img src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/96/null/external-share-user-interface-anggara-basic-outline-anggara-putra-3.png"  ></img>
+          <img src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/96/null/external-share-user-interface-anggara-basic-outline-anggara-putra-3.png" alt='share image' ></img>
           <span style={{'fontSize':'1rem'}}>(underdevlopement)</span>
           </a>
           </div>
@@ -191,10 +209,10 @@ const MainPage = () => {
           </div>
           </div>
         </div>
-        <div className="email">
+        <div className="email" ref={scollToContact}>
           <span>Want to know more?<br></br>reach out here!👇</span>
          <div className="break"></div>
-          <img src={emailImg}></img>
+          <img src={emailImg} alt='genric image'></img>
           
         </div>
         
@@ -208,7 +226,17 @@ const MainPage = () => {
         </div>
         </div>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Shresth Gupta ©2023 </Footer>
+      <Footer style={{ textAlign: 'center' }}> 
+      <div className="footer-container">
+        <div className="footer-txt">
+        <div className="reach-here">
+          <p>Reach out here</p>
+          <span><a href={'https://'+'github.com/shhresth/polyVision'} target='_blank' rel="noreferrer"><GithubFilled style={{'paddingRight':'2rem'}}/></a></span>
+          <span><a href={'https://'+'instagram.com/shhresth/'} target='_blank' rel="noreferrer"><InstagramOutlined/></a></span>
+        </div>
+        </div>
+      </div>
+      </Footer>
     </Layout>
     </div>
   )

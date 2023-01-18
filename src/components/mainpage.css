@@ -44,7 +44,7 @@
   .line2 .subtxt{
     display: inline-block;
     width: 40vw;
-    font-size: clamp(0.5rem,1.5vw,2rem);
+    font-size: clamp(0.6rem,1.5vw,2rem);
     margin-left: 2rem;
     font-family:'ClashDisplay-Medium';
   }
@@ -53,7 +53,7 @@
   }
   .line3 .subtxt{
     margin-left: 4rem;
-    font-size: clamp(1.5rem,7vw,12vw);
+    font-size: clamp(2.2rem,7vw,12vw);
     font-family:'ClashDisplay-Medium';
   }
   .highlight-title{
@@ -63,14 +63,17 @@
     white-space:nowrap;
     text-align: center;
   }
-
-  .ant-divider{
+  .ant-divider:first-child{
+    background-color: black;
+    margin-top: 0.5vh;
+  }
+  .ant-divider:nth-child(2){
     background-color: black;
     margin-top: 2vh;
   }
   @media only screen and (max-width: 600px) {
     .highlight-title{
-      margin-top: 1vh;
+      margin-top: 5vh;
   
     }
   }
@@ -258,7 +261,7 @@ margin-left: 20vw;
   @media only screen and (max-width: 600px) {
     .work-projects .projects{
       padding-top: 10px;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     .work-projects img{
       width: 2.5rem;
@@ -355,7 +358,7 @@ margin-left: 20vw;
       
       }
       #come-txt{
-        font-size: 2.5rem
+        font-size: 1.4rem
       }
       .pv-anchor a{
         text-decoration: none;
@@ -364,4 +367,65 @@ margin-left: 20vw;
         font-size: clamp(1rem,1.8rem,2.5rem);
         padding-left: 10vw;
       }
+  }
+  .footer-container{
+    width: 100vw;
+    background-color: black;
+    height: 30vh;
+    padding: 0px;
+    display: grid;
+    place-content: center;
+    
+  }
+  .footer-txt img{
+  width: 40%;
+  height: fit-content;
+  }
+  .footer-container {
+    background-image: url(../images/talk-banner.png);
+    background-position: center;
+    
+    background-size: 50VW;
+    
+  }
+  .reach-here a{
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .ant-layout .ant-layout-footer{
+    padding: 0px;
+    padding-top: 3vh;
+  }
+  .reach-here{
+    background-color: rgb(255, 255, 255);
+   width: 40vw;
+    font-size: 2rem;
+    font-family:'ClashDisplay-Bold';
+  }
+  @media only screen and (max-width: 600px) {
+    .footer-container{
+      background-size: 70vw;
+      height: 20vh;
+    }
+    .reach-here{
+      width: 80vw;
+    }
+    .reach-here p{
+     margin: 0;
+    }
+    .line1 span{
+      font-size: 13vw;
+    }
+    .line2 .maintxt{
+      font-size: 8vw;
+    }
+    .ant-layout .ant-layout-header{
+      padding: 0px;
+    }
+    .email{
+      padding-top: 5vh;
+    }
+   
   }
