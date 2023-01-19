@@ -1,6 +1,6 @@
 import {React,useRef} from 'react'
 import '../components/mainpage.css'
-import {Carousel, Col, Layout, Menu, Progress, Row, theme} from 'antd';
+import {Carousel, Col, Layout, Menu, Progress, message, theme} from 'antd';
 import {Divider} from 'antd';
 import { MessageFilled,ArrowDownOutlined,StarOutlined, InstagramFilled, InstagramOutlined, ToolFilled, FundProjectionScreenOutlined} from '@ant-design/icons';
 import {ConfigProvider} from 'antd';
@@ -20,11 +20,14 @@ const MainPage = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_ooayjp4', 'template_efzrbp8', form.current, 'IfFBygp8KaMh-_zNy')
+    emailjs.sendForm('service_ooayjp4', 'template_2uk1hvn', form.current, 'IfFBygp8KaMh-_zNy')
       .then((result) => {
         e.target.reset();
           console.log('Email has been send');
+          message.open({
+            type: 'success',
+            content: 'The message has been send! 🎉',
+          });
       }, (error) => {
           console.log(error.text);
       });
@@ -218,9 +221,9 @@ const MainPage = () => {
         
         <div className="email-form">
         <form ref={form} onSubmit={sendEmail}>
-      <input type="text" name="user_name" placeholder='Your Name'/>
-      <input type="email" name="user_email" placeholder='Your Email'/>
-      <textarea name="message" placeholder='Enter Your Message Here'/>
+      <input type="text" name="user_name" placeholder='Your Name' required/>
+      <input type="email" name="user_email" placeholder='Your Email' required/>
+      <textarea name="message" placeholder='Enter Your Message Here' required style={{'height':'10vh'}}/>
       <input type="submit" value="Submit" />
     </form>
         </div>
@@ -231,7 +234,7 @@ const MainPage = () => {
         <div className="footer-txt">
         <div className="reach-here">
           <p>Reach out here</p>
-          <span><a href={'https://'+'github.com/shhresth/polyVision'} target='_blank' rel="noreferrer"><GithubFilled style={{'paddingRight':'2rem'}}/></a></span>
+          <span><a href={'https://'+'github.com/shhresth'} target='_blank' rel="noreferrer"><GithubFilled style={{'paddingRight':'2rem'}}/></a></span>
           <span><a href={'https://'+'instagram.com/shhresth/'} target='_blank' rel="noreferrer"><InstagramOutlined/></a></span>
         </div>
         </div>

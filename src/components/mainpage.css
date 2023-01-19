@@ -300,6 +300,7 @@ margin-left: 20vw;
     padding-top: 5px;
     color: #FBFBF2;
     height: 2rem;
+    font-weight: 400;
   }
   .email-form textarea:focus{
     outline: none;
@@ -319,7 +320,8 @@ margin-left: 20vw;
     border: none;
     border-bottom: 2px solid white;
     padding-top: 5px;
-    color: #FBFBF2;
+    color: #ffffff;
+    font-weight: 400;
   }
 
   .email-form form{
@@ -428,4 +430,8 @@ margin-left: 20vw;
       padding-top: 5vh;
     }
    
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
   }
