@@ -2,7 +2,7 @@ import {React,useRef} from 'react'
 import '../components/mainpage.css'
 import {Carousel, Col, Layout, Menu, Progress, message, theme} from 'antd';
 import {Divider} from 'antd';
-import { MessageFilled,ArrowDownOutlined,StarOutlined, InstagramFilled, InstagramOutlined, ToolFilled, FundProjectionScreenOutlined} from '@ant-design/icons';
+import { MessageFilled,ArrowDownOutlined,StarOutlined, MailFilled, InstagramOutlined, ToolFilled, FundProjectionScreenOutlined} from '@ant-design/icons';
 import {ConfigProvider} from 'antd';
 import banner from '../images/polyvision-banner.png'
 import pv1 from '../images/pv-1.png'
@@ -51,13 +51,13 @@ const MainPage = () => {
           className='menus'
           onClick={(e)=>{
             if(e.key=== 'skills'){
-              scollToSkills.current.scrollIntoView();
+              scollToSkills.current.scrollIntoView({behavior: "smooth"});
             }
             else if(e.key=== 'projects'){
-              scollToprojects.current.scrollIntoView();
+              scollToprojects.current.scrollIntoView({behavior: "smooth"});
             }
             else{
-              scollToContact.current.scrollIntoView();
+              scollToContact.current.scrollIntoView({behavior: "smooth"});
             }
           }}
           items={[
@@ -90,11 +90,11 @@ const MainPage = () => {
        </div>
        <div className="line2">
    
-     <span className='maintxt'>UI/UX</span><span className='subtxt'>Web Developer with 1 year of experience. Based in India. Looking for internship opportunity in startups and agencies. </span>
+     <span className='maintxt'>UI/UX</span><span className='subtxt'>Web Developer with two years of experience. Based in India. Looking for internship opportunity in startups and agencies. </span>
 
        </div>
        <div className="line3">
-            <span><ArrowDownOutlined></ArrowDownOutlined></span><span className='subtxt'>Designer</span>
+            <span><ArrowDownOutlined></ArrowDownOutlined></span><span className='subtxt'>Student</span>
        </div>
        <div className="projects">
         <div className="highlight-title">
@@ -153,6 +153,9 @@ const MainPage = () => {
         <span className='progress-bar-title'>React.js</span>
         <Progress percent={80} rpercent={85}   strokeColor={'black'} ></Progress>
 
+        <span className='progress-bar-title'>Next.js</span>
+        <Progress percent={60} rpercent={85}   strokeColor={'black'} ></Progress>
+
         <span className='progress-bar-title'>Bootstrap</span>
         <Progress percent={90} rpercent={85}   strokeColor={'black'} ></Progress>
         
@@ -175,7 +178,7 @@ const MainPage = () => {
         <Progress percent={85} rpercent={85}   strokeColor={'black'} ></Progress>
 
         <span className='progress-bar-title'>SQL</span>
-        <Progress percent={99} rpercent={85}   strokeColor={'black'} ></Progress>
+        <Progress percent={85} rpercent={85}   strokeColor={'black'} ></Progress>
 
         <span className='progress-bar-title'>Canva</span>
         <Progress percent={100} rpercent={85}   strokeColor={'black'} ></Progress>
@@ -187,8 +190,8 @@ const MainPage = () => {
         </div>
         <div className="work-section"  ref={scollToprojects}>
           <div className="work-txt">
-            <p>My Works</p>
-            <span>The following are my most recent works.
+            <p>My Work</p>
+            <span>The following are my most recent work.
               you can click and view them in production enviroment.
             </span>
           </div>
@@ -235,7 +238,7 @@ const MainPage = () => {
         <div className="reach-here">
           <p>Reach out here</p>
           <span><a href={'https://'+'github.com/shhresth'} target='_blank' rel="noreferrer"><GithubFilled style={{'paddingRight':'2rem'}}/></a></span>
-          <span><a href={'https://'+'instagram.com/shhresth/'} target='_blank' rel="noreferrer"><InstagramOutlined/></a></span>
+          <span><a href={'mailto:shresthgupta106@gmail.com'} target='_blank' rel="noreferrer"><MailFilled/></a></span>
         </div>
         </div>
       </div>

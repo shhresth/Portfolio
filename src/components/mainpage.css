@@ -1,16 +1,16 @@
 
 
     :root{
-        --bg_color: #FBFBF2;
+        --bg_color: #10100e;
     }
 .container{
-  background-color: var(--bg_color);
+  background-color: var(--bg_color) ;
 }
   .logo {
     float: left;
-    width: 10rem;
+    width: fit-content;
     height: 31px;
-    font-size: large;
+    font-size: 2rem;
     font-family: 'ClashDisplay-Semibold';
     color: #FBFBF2;
     word-wrap:break-word;
