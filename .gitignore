@@ -4,15 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/_next
 ./node_modules
 /.pnp
 .pnp.js
 node_modules/
 /V1/build/
+/portfolio/
 # testing
 /coverage
-
+/dist/
 # production
 /build
 /out
