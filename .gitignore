@@ -9,7 +9,8 @@
 /.pnp
 .pnp.js
 node_modules/
-/V1/build/
+/V1/
+V1
 /portfolio/
 # testing
 /coverage
