@@ -60,8 +60,12 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Generate sitemap (single-page)
-        if: exists('scripts/generate-sitemap.js')
-        run: node ./scripts/generate-sitemap.js
+        run: |
+          if [ -f "./scripts/generate-sitemap.js" ]; then
+            node ./scripts/generate-sitemap.js
+          else
+            echo "No sitemap script found, skipping"
+          fi
 
       - name: Build with Next.js
         run: pnpm next build
