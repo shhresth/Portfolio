@@ -268,11 +268,11 @@ export default function Portfolio() {
                   </p>
                 </div>
                 <p className={`mb-8 text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
-                  Currently crafting scalable solutions at{" "}
+                  Currently pursuing my {" "}
                   <span className={`font-semibold ${isDarkMode ? "text-orange-300" : "text-orange-700"}`}>
-                    HarmoCare
+                    Bachelor's in IT
                   </span>
-                  while pursuing my Bachelor's in IT. I believe in building things that matter, one commit at a time.
+                  .I believe in building things that matter, one commit at a time.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
