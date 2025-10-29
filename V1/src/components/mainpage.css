@@ -1,0 +1,437 @@
+
+
+    :root{
+        --bg_color: #10100e;
+    }
+.container{
+  background-color: var(--bg_color) ;
+}
+  .logo {
+    float: left;
+    width: fit-content;
+    height: 31px;
+    font-size: 2rem;
+    font-family: 'ClashDisplay-Semibold';
+    color: #FBFBF2;
+    word-wrap:break-word;
+  }
+  .menus{
+    font-family: 'ClashDisplay-Small';
+    /* float: right; */
+  }
+  .coltest{
+    font-size: 100px;
+  }
+  .ant-menu{
+    font-family: 'ClashDisplay-Medium';
+  }
+  .line1{
+    display: flex;
+    width: 100vw;
+  }
+  .line1 span{
+    font-size: 10em;
+    width: 100%;
+    font-size:clamp(2rem,10vw,15vw);
+    white-space:nowrap;
+    font-family:'ClashDisplay-Medium';;
+  }
+  .line2 .maintxt{
+    width: 50vw;
+    font-size: clamp(1.5rem,7vw,12vw);
+    font-family:'ClashDisplay-Bold';
+  }
+  .line2 .subtxt{
+    display: inline-block;
+    width: 40vw;
+    font-size: clamp(0.6rem,1.5vw,2rem);
+    margin-left: 2rem;
+    font-family:'ClashDisplay-Medium';
+  }
+  .anticon-arrow-down{
+    font-size: clamp(1rem,8vw,10vw);
+  }
+  .line3 .subtxt{
+    margin-left: 4rem;
+    font-size: clamp(2.2rem,7vw,12vw);
+    font-family:'ClashDisplay-Medium';
+  }
+  .highlight-title{
+    margin-top: 10vh;
+    font-family:'ClashDisplay-Medium';
+    font-size: clamp(2rem,8vw,12vw);
+    white-space:nowrap;
+    text-align: center;
+  }
+  .ant-divider:first-child{
+    background-color: black;
+    margin-top: 0.5vh;
+  }
+  .ant-divider:nth-child(2){
+    background-color: black;
+    margin-top: 2vh;
+  }
+  @media only screen and (max-width: 600px) {
+    .highlight-title{
+      margin-top: 5vh;
+  
+    }
+  }
+  .contentStyle{
+    height: 60vh;
+    align-items: center;
+    margin: auto;
+  }
+  .slick-slider{
+    margin-left: auto;
+  }
+  @media only screen and (max-width: 600px) {
+    .contentStyle{
+      height: 25vh;
+      width: 90vw;
+      align-items: center;
+      margin: auto;
+    }
+    .slick-slider{
+      width: 95vw;
+    }
+  }
+  .main-info{
+    text-align: start;
+  }
+  .main-info-header span{
+    font-family:'ClashDisplay-Medium';
+    font-size: 3rem;
+  }
+  .pv-anchor a{
+    text-decoration: none;
+    color: black;
+    font-family:'ClashDisplay-Medium';
+    font-size: clamp(1rem,2.2rem,2.5rem);
+    padding-left: 10vw;
+  }
+  @media only screen and (max-width: 600px) {
+    .main-info-header .main-year{
+      font-size:2rem;
+    }
+    .anticon .anticon-star{
+      font-size:1.8rem;
+    }
+  }
+
+  .pv-anchor :hover{
+    color: black;
+    text-decoration: underline;
+  }
+  .pv-info{
+    color: black;
+    font-family:'ClashDisplay-Light';
+    font-size: 1.5rem;
+    width: 80vw;
+margin-left: 10vw;
+
+  }
+  @media only screen and (max-width: 600px) {
+    .pv-info{
+      font-size: 1rem;
+    }
+  }
+  .pv-links{
+    width: 80vw;
+    margin-left: 10vw;
+    font-family:'ClashDisplay-Light';
+    font-size: 1rem;
+    word-wrap: nowrap;
+
+  }
+  .pv-links span{
+    margin-left: 5px;
+    font-family:'ClashDisplay-Light';
+    font-size: 1rem;
+  }
+  .pv-links a{
+color: black;
+text-decoration: none;
+  }
+  .pv-links a:hover{
+    color: black;
+    text-decoration: underline;
+      }  
+      .main-info{
+        padding-top: 1rem;
+      }
+  .main-year{
+   display: block; 
+   background-color: black;
+   color: white;
+   text-align: center;
+   width: fit-content;
+   align-self: center;
+   text-align: center;
+   margin: auto;
+   margin:  1rem auto 1rem auto;
+   
+  }
+  .skills p{
+    background-color: black;
+    color: white;
+    font-family:'ClashDisplay-Medium';
+    font-size: 2.5rem;
+    width: fit-content;
+  align-self: center;
+  text-align: center;
+  margin: auto;
+  margin:  2rem auto 1rem auto;
+  }
+  .ant-progress
+  {
+    padding-left: 5px;
+  }
+  .Progress-bar{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 0.1fr 0.84fr;
+    width: 100%;
+    gap: 0;
+    align-items: initial;
+    width: 60vw;
+margin-left: 20vw;
+  }
+  .Progress-bar span{
+    text-align: end;
+    font-size: 0.8rem;
+    padding-top: 2px;
+    font-family:'ClashDisplay-Regular';
+  }
+  @media only screen and (max-width: 600px) {
+  .Progress-bar{
+    width: 80vw;
+    margin-left: 15vw;
+  }
+  }
+  .work-txt{
+
+    text-align: end;
+    padding-right: 10vw;
+   
+  }
+  .work-txt p{
+    padding-top: 10vh;
+    font-size: 4rem;
+    font-family:'ClashDisplay-SemiBold';
+    margin-bottom: 10px;
+  }
+  .work-txt span{
+    display: inline-block;
+    width: 16.5vw;
+    font-family:'ClashDisplay-Light';
+    text-align: start;
+    font-size: 1.3rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .work-txt span{
+      width: 50vw;
+      font-size: 1rem;
+    }
+    .work-txt p{
+      padding-top: 5vh;
+      font-size: 3rem;
+    }
+  }
+  .work-projects{
+    text-align: start;
+    padding-left: 15vw;
+  }
+  .work-projects .projects{
+    font-family:'ClashDisplay-Medium';
+    font-size: 8rem;
+  }
+  .work-projects img{
+    width: 4.5rem;
+    padding-left: 5px;
+  }
+  .projects a{
+    color: black;
+  }
+  .projects a:hover{
+      color: black;
+      text-decoration: underline;
+    
+  }
+  @media only screen and (max-width: 600px) {
+    .work-projects .projects{
+      padding-top: 10px;
+      font-size: 2rem;
+    }
+    .work-projects img{
+      width: 2.5rem;
+    }
+    .work-projects{
+      padding-left: 10vw;
+    }
+
+  }
+  .email{
+    padding-top: 8vh;
+    text-align: start;
+    padding-left: 15vw;
+    width: 100vw;
+    display: flex;
+  }
+  .email span{
+    text-align: start;
+    font-family:'ClashDisplay-Semibold';
+    font-size: 3rem;
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+  .email img{
+    width: 50%;
+  }
+  .email-form form input{
+    align-content:center;
+    width: 50vw;
+    font-family:'ClashDisplay-Regular';
+    background-color: black;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    padding-top: 5px;
+    color: #FBFBF2;
+    height: 2rem;
+    font-weight: 400;
+  }
+  .email-form textarea:focus{
+    outline: none;
+}
+.email-form input:focus{
+  outline: none;
+}
+  .email-form form input:first-child{
+  margin-top: 4rem;
+  
+  }
+  .email-form form textarea{
+    align-content:center;
+    max-width: 50vw;
+    font-family:'ClashDisplay-Regular';
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid white;
+    padding-top: 5px;
+    color: #ffffff;
+    font-weight: 400;
+  }
+
+  .email-form form{
+    display: inline-grid;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .email-form form textarea {
+      max-width: 80vw;
+    }
+    .email-form form input {
+      width: 80vw;
+    }
+    .email span{
+      font-size: 1.2rem;
+      width: fit-content;
+      text-align: center;
+      /* margin: 0 10vw 0 10vw */
+      word-wrap: nowrap;
+      align-self: center;
+    }
+    .email{
+      flex-direction: column-reverse;
+      padding-left:0;
+    
+    }
+    .email img{
+      width: 80vw;
+      margin-left: 10vw;
+    }
+    .break{
+      flex-basis: 100%;
+    }
+    .email-form form input:first-child{
+      margin-top: 2rem;
+      
+      }
+      #come-txt{
+        font-size: 1.4rem
+      }
+      .pv-anchor a{
+        text-decoration: none;
+        color: black;
+        font-family:'ClashDisplay-Medium';
+        font-size: clamp(1rem,1.8rem,2.5rem);
+        padding-left: 10vw;
+      }
+  }
+  .footer-container{
+    width: 100vw;
+    background-color: black;
+    height: 30vh;
+    padding: 0px;
+    display: grid;
+    place-content: center;
+    
+  }
+  .footer-txt img{
+  width: 40%;
+  height: fit-content;
+  }
+  .footer-container {
+    background-image: url(../images/talk-banner.png);
+    background-position: center;
+    
+    background-size: 50VW;
+    
+  }
+  .reach-here a{
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .ant-layout .ant-layout-footer{
+    padding: 0px;
+    padding-top: 3vh;
+  }
+  .reach-here{
+    background-color: rgb(255, 255, 255);
+   width: 40vw;
+    font-size: 2rem;
+    font-family:'ClashDisplay-Bold';
+  }
+  @media only screen and (max-width: 600px) {
+    .footer-container{
+      background-size: 70vw;
+      height: 20vh;
+    }
+    .reach-here{
+      width: 80vw;
+    }
+    .reach-here p{
+     margin: 0;
+    }
+    .line1 span{
+      font-size: 13vw;
+    }
+    .line2 .maintxt{
+      font-size: 8vw;
+    }
+    .ant-layout .ant-layout-header{
+      padding: 0px;
+    }
+    .email{
+      padding-top: 5vh;
+    }
+   
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
+  }
