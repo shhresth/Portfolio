@@ -20,6 +20,11 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # For custom domain root deployment (e.g. https://shresth.is-a.dev) we
+      # want asset URLs to be rooted at /, so set these to empty strings.
+      NEXT_PUBLIC_BASE_PATH: ''
+      NEXT_PUBLIC_ASSET_PREFIX: ''
     steps:
       - name: Checkout
         uses: actions/checkout@v4
