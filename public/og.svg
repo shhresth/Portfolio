@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="60%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.5">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g opacity="0.18" stroke="#1f1f23" stroke-width="1">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <g transform="translate(80, 200)">
+    <g>
+      <rect x="0" y="0" width="60" height="60" rx="12" fill="#111111" stroke="#1f1f23"/>
+      <text x="30" y="40" text-anchor="middle" font-family="ui-monospace, monospace" font-size="22" font-weight="600" fill="#818cf8">SG</text>
+    </g>
+    <text x="80" y="26" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#a1a1aa">Shresth Gupta</text>
+    <text x="80" y="52" font-family="ui-monospace, monospace" font-size="14" fill="#71717a">Mumbai, India · Open to roles</text>
+  </g>
+
+  <g transform="translate(80, 310)">
+    <text font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="600" fill="url(#text)">
+      <tspan x="0" y="0">Backend &amp; Full-Stack</tspan>
+      <tspan x="0" y="80">Engineer</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(80, 530)" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#a1a1aa">
+    <text x="0" y="0">Secure products · Scalable APIs · AI-native experiences</text>
+  </g>
+
+  <g transform="translate(900, 540)" font-family="ui-monospace, monospace" font-size="14" fill="#71717a">
+    <text x="0" y="0">github.com/shhresth</text>
+    <text x="0" y="22">linkedin.com/in/shhresth</text>
+  </g>
+</svg>
