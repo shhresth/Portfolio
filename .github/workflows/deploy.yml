@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - uses: actions/checkout@v4
 
@@ -33,6 +35,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
+        env:
+          NEXT_PUBLIC_RESUME_URL: ${{ vars.NEXT_PUBLIC_RESUME_URL }}
         run: pnpm build
 
       - name: Setup Pages
