@@ -10,17 +10,15 @@ const themeScript = `
 (function() {
   try {
     var stored = localStorage.getItem('theme');
-    var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    var theme = stored ? stored : (prefersLight ? 'light' : 'dark');
-    if (theme === 'light') {
-      document.documentElement.classList.remove('dark');
-    } else {
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored ? stored : (prefersDark ? 'dark' : 'light');
+    if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
     document.documentElement.dataset.theme = theme;
-  } catch (e) {
-    document.documentElement.classList.add('dark');
-  }
+  } catch (e) {}
 })();
 `;
 
@@ -136,7 +134,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

@@ -99,7 +99,7 @@ export function Hero() {
               href="#work"
               className="group inline-flex items-center gap-2 rounded-md bg-[var(--color-fg)] px-4 py-2.5 text-sm font-medium text-[var(--color-bg)] transition-transform hover:-translate-y-0.5"
             >
-              See selected work
+              Check out my projects
               <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
             </a>
             <a

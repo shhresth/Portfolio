@@ -107,15 +107,15 @@ export const PROJECTS: Project[] = [
     slug: "deeplog",
     title: "DeepLog",
     oneLiner:
-      "A Streamlit app that surfaces anomalous log lines using TF-IDF + DBSCAN clustering, visualised in 2D via PCA.",
+      "An AI-powered log anomaly detector that uses classical machine learning to surface hidden errors in noisy system logs.",
     description:
-      "Upload a .log or .csv file, get back a clustered dataset with the noise points flagged as anomalies and a downloadable CSV. Built around a pragmatic classical-ML pipeline: clean → vectorise → cluster → project → flag.",
-    why: "It shows I can take a noisy, real-world data problem (free-text system logs) and ship a small, usable tool end-to-end — from preprocessing to a deployed UI.",
+      "A Streamlit app that processes uploaded `.log` or `.csv` files through a classical ML pipeline—text normalization, TF-IDF vectorization, and DBSCAN clustering—to flag outlier patterns, complete with 2D PCA visualization and CSV export.",
+    why: "It demonstrates my ability to bridge the gap between raw data and actionable insights. Instead of relying on black-box models, I engineered a deterministic, highly efficient classical ML pipeline that scales well and provides interpretable results, proving I can ship end-to-end data tools from preprocessing to a polished UI.",
     highlights: [
-      "Log cleaner normalises IPs, UUIDs, and numbers to stable placeholders",
-      "TF-IDF vectorisation with a Fast / Full processing toggle for large files",
-      "DBSCAN over cosine distance; cluster -1 (noise) is treated as the anomaly set",
-      "PCA scatter plot with anomalies in red, plus a CSV export of the labelled dataset",
+      "Custom regex-based log cleaner that normalizes dynamic values (IPs, UUIDs, numbers) into stable placeholders for consistent clustering.",
+      "Configurable TF-IDF vectorization with a 'Fast' (1,000 features) and 'Full' (3,000 features) mode to balance speed and accuracy for large datasets.",
+      "Unsupervised anomaly detection using DBSCAN (eps=0.5, min_samples=5) over cosine similarity, treating outlier noise as the primary anomaly signal.",
+      "Interactive Streamlit dashboard featuring a PCA-based 2D scatter plot (anomalies highlighted in red) and a one-click CSV export of the labelled dataset.",
     ],
     stack: ["Python", "Streamlit", "scikit-learn", "pandas", "Matplotlib", "Seaborn"],
     category: "side",

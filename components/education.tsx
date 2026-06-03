@@ -13,7 +13,7 @@ export function Education() {
           eyebrow="Education"
           title={
             <>
-              Trust-building context, not the main event.
+              Where I learned the theory.
             </>
           }
         />

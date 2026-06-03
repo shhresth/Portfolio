@@ -120,7 +120,7 @@ function CardBody({ project }: { project: (typeof PROJECTS)[number] }) {
         ))}
       </ul>
 
-      <div className="mt-auto flex flex-wrap items-end justify-between gap-3 pt-2">
+      <div className="mt-auto flex flex-col gap-3 pt-2">
         <ul className="flex flex-wrap gap-1.5">
           {project.stack.map((s) => (
             <li
@@ -131,7 +131,7 @@ function CardBody({ project }: { project: (typeof PROJECTS)[number] }) {
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-end gap-3">
           {project.links.map((l) => (
             <a
               key={l.href}
@@ -152,7 +152,7 @@ function CardBody({ project }: { project: (typeof PROJECTS)[number] }) {
 
 function SideBody({ project }: { project: (typeof PROJECTS)[number] }) {
   return (
-    <div className="flex flex-col gap-3 p-5">
+    <div className="flex flex-1 flex-col gap-3 p-5">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-[var(--color-fg)]">
           {project.title}
@@ -164,7 +164,18 @@ function SideBody({ project }: { project: (typeof PROJECTS)[number] }) {
       <p className="text-sm leading-relaxed text-[var(--color-fg-muted)]">
         {project.oneLiner}
       </p>
-      <div className="mt-1 flex items-center justify-between gap-3">
+      <p className="text-sm leading-relaxed text-[var(--color-fg-dim)]">
+        {project.description}
+      </p>
+      <ul className="mt-1 space-y-1.5 text-sm text-[var(--color-fg-muted)]">
+        {project.highlights.map((h) => (
+          <li key={h} className="flex items-start gap-2">
+            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[var(--color-accent)]" />
+            <span>{h}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-auto flex flex-col gap-3 pt-2">
         <ul className="flex flex-wrap gap-1.5">
           {project.stack.map((s) => (
             <li
@@ -175,7 +186,7 @@ function SideBody({ project }: { project: (typeof PROJECTS)[number] }) {
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-end gap-3">
           {project.links.map((l) => (
             <a
               key={l.href}
